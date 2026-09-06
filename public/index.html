@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Management CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Lead Management CRM</h1>
+        <p>Client Lead Management System</p>
+    </header>
+
+    <main>
+
+        <section class="stats">
+            <div class="card">
+                <h3>Total Leads</h3>
+                <p id="totalLeads">0</p>
+            </div>
+
+            <div class="card">
+                <h3>New</h3>
+                <p id="newLeads">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Contacted</h3>
+                <p id="contactedLeads">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Converted</h3>
+                <p id="convertedLeads">0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add New Lead</h2>
+
+            <form id="leadForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Lead Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="source"
+                    placeholder="Source (Website, Referral, etc.)"
+                    required
+                >
+
+                <select id="status">
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Converted">Converted</option>
+                </select>
+
+                <textarea
+                    id="notes"
+                    placeholder="Notes / Follow-up details"
+                ></textarea>
+
+                <button type="submit">Add Lead</button>
+
+            </form>
+        </section>
+
+        <section class="leads-section">
+            <h2>All Leads</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Source</th>
+                            <th>Status</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="leadsTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
